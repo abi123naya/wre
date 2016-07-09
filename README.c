@@ -1,0 +1,38 @@
+# wre
+#include <iostream> //include header file
+
+using namespace std;
+
+int main () //start of main fcn
+{
+
+    int values[ 20 ]; //delcares array and how many elements
+    int small,big; //declares integer
+    big=small=values[0]; //assigns element to be highest or lowest value
+
+
+    for ( int i = 0; i < 20; i++ ) //counts to 20 and prompts user for value and stores it
+    {
+        cout << "Enter value " << i << ": ";
+        cin >> values[i];
+    }
+
+    for (int i = 0; i < 20; i++) //works out bigggest number
+    {
+        if(values[i]>big) //compare biggest value with current element
+        {
+            big=values[i];
+        }
+    }
+
+    for (int i = 0; i < 20; i++) //works out smallest number
+    {
+        if(values[i]<small) //compares smallest value with current element
+        {
+            small=values[i];
+        }
+    }
+
+    cout << "The biggest number is " << big << endl; //prints outs biggest no
+    cout << "The smallest number is " << small << endl; //prints out smalles no
+}
